@@ -2,10 +2,6 @@ services:
   - type: web
     name: ecombooks
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn bookstore.wsgi
-    envVars:
-      - key: DEBUG
-        value: False
-      - key: SECRET_KEY
-        generateValue: true
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn bookstore.wsgi"
+    staticPublishPath: staticfiles

@@ -1,2 +1,0 @@
-gunicorn EcomBooks.wsgi:application
-
